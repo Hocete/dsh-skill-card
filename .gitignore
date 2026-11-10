@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# local dev / QA artifacts (screenshots, CDP profiles, generated test pages)
+.smoke/
+panel-test.html
+panel-measure.html
+
+# packaging
+*.tgz
+
+# os junk
+.DS_Store
+Thumbs.db

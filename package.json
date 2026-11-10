@@ -1,0 +1,65 @@
+{
+  "name": "dsh-skill-card",
+  "version": "0.1.0",
+  "description": "Renders DeepSeek Harness skills as a swipeable game-style card gallery: four carousel modes, category/source/tag filters, and editable rarity, stars, five stats, tags and card art stored in a side-car file, so SKILL.md itself is left untouched.",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "cards",
+    "gallery",
+    "ui"
+  ],
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "icon.svg",
+    "assets",
+    "README.md"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hocete/dsh-skill-card.git"
+  },
+  "homepage": "https://github.com/Hocete/dsh-skill-card#readme",
+  "bugs": {
+    "url": "https://github.com/Hocete/dsh-skill-card/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
